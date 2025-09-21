@@ -1,6 +1,6 @@
 GitHub Repository Access Checker:
 
-This script helps you list all GitHub users with read (pull) access to a given repository.
+This script helps an organisation list all GitHub users with read (pull) access to a given repository.
 It uses the GitHub REST API, a personal access token (PAT) for authentication, and the jq command-line JSON processor.
 
 It can be deployed and executed on an AWS EC2 instance (or any Linux-based environment with bash, curl, and jq installed).
@@ -43,7 +43,9 @@ export token="your_personal_access_token"
 Clone this repository (or copy the script to your EC2 instance).
 
 git clone https://github.com/<your-org>/<your-repo>.git
+
 cd <your-repo>
+
 chmod +x github_read_access_checker.sh
 
 
@@ -53,7 +55,7 @@ chmod +x github_read_access_checker.sh
 
 
 
-Deployment on AWS EC2:
+6)Deployment on AWS EC2:
 
 Launch an EC2 instance (Amazon Linux or Ubuntu).
 
@@ -68,6 +70,13 @@ Set environment variables (username and token).
 
 Run the script as shown above.
 
+
+7)Expected Outputs:
+
+<img width="862" height="86" alt="gh1" src="https://github.com/user-attachments/assets/e7d6b372-c0e9-4f88-a308-640ad5f5e498" />
+
+
+<img width="859" height="173" alt="gh2" src="https://github.com/user-attachments/assets/029b0397-740b-45aa-9554-c317c8e8a79d" />
 
 
 🔒Security Note
