@@ -22,7 +22,7 @@ Before running the script, ensure you have:-
 -->Installed dependencies:
 
 sudo yum install -y jq curl git   # For Amazon Linux
-# OR
+#OR
 sudo apt-get update && sudo apt-get install -y jq curl git   # For Ubuntu/Debian
 
 
