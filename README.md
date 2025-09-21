@@ -23,7 +23,11 @@ Before running the script, ensure you have:-
 -->Installed dependencies:
 
 sudo yum install -y jq curl git   # For Amazon Linux
+
+
 #OR
+
+
 sudo apt-get update && sudo apt-get install -y jq curl git   # For Ubuntu/Debian
 
 
@@ -35,16 +39,17 @@ Create a PAT here: https://github.com/settings/tokens
 3)Export your GitHub credentials in the shell environment:
 
 export username="your_github_username"
+
 export token="your_personal_access_token"
 
 
-4)Usage
+4)Usage:
 
 Clone this repository (or copy the script to your EC2 instance).
 
-git clone https://github.com/<your-org>/<your-repo>.git
+git clone https://github.com/<your_org>/<your_repo>.git
 
-cd <your-repo>
+cd <your_repo>
 
 chmod +x github_read_access_checker.sh
 
@@ -57,18 +62,17 @@ chmod +x github_read_access_checker.sh
 
 6)Deployment on AWS EC2:
 
-Launch an EC2 instance (Amazon Linux or Ubuntu).
+-------->Launch an EC2 instance (Amazon Linux or Ubuntu).
 
-SSH into the instance:
+-------->SSH into the instance:
 
 ssh -i your-key.pem ec2-user@<ec2-public-ip>
 
+-------->Install dependencies (jq, curl).
 
-Install dependencies (jq, curl).
+-------->Set environment variables (username and token).
 
-Set environment variables (username and token).
-
-Run the script as shown above.
+-------->Run the script as shown above.
 
 
 7)Expected Outputs:
@@ -79,13 +83,15 @@ Run the script as shown above.
 <img width="859" height="173" alt="gh2" src="https://github.com/user-attachments/assets/029b0397-740b-45aa-9554-c317c8e8a79d" />
 
 
+
 🔒Security Note
 
-Never hardcode your GitHub credentials inside the script.
+-->Never hardcode your GitHub credentials inside the script.
 
-Use environment variables or AWS Secrets Manager for secure credential storage.
+-->Use environment variables or AWS Secrets Manager for secure credential storage.
 
-Ensure the EC2 instance has restricted access and proper IAM/security group rules.
+-->Ensure the EC2 instance has restricted access and proper IAM/security group rules.
+
 
 
 📄License
