@@ -13,6 +13,7 @@ Filters and displays only those with read access (pull permission).
 
 Useful for auditing access to your repositories.
 
+
 2)Prerequisites:
 
 Before running the script, ensure you have:-
@@ -30,12 +31,14 @@ sudo apt-get update && sudo apt-get install -y jq curl git   # For Ubuntu/Debian
 
 Create a PAT here: https://github.com/settings/tokens
 
+
 3)Export your GitHub credentials in the shell environment:
 
 export username="your_github_username"
 export token="your_personal_access_token"
 
-4) Usage
+
+4)Usage
 
 Clone this repository (or copy the script to your EC2 instance).
 
